@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos</title>
+
+    <style>
+        .cuerpo{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imagen{
+            background-color: blue;
+            margin: 10px;
+        }
+        .retos{
+            margin: 20px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="cuerpo">
+        <div class="imagen">
+            <img src="ruleta.png" width="500px">
+        </div>
+        <div class="retos">
+            <input type="text" id="reto_1">
+            <!-- <input type="text" id="reto_2">
+            <input type="text" id="reto_3">
+            <input type="text" id="reto_4">
+            <input type="text" id="reto_5">
+            <input type="text" id="reto_6">
+            <input type="text" id="reto_7">
+            <input type="text" id="reto_8">
+            <input type="text" id="reto_9">
+            <input type="text" id="reto_10">
+            <input type="text" id="reto_11">
+            <input type="text" id="reto_12"> -->
+            <input type="submit" value="registrar" onclick="guardarRetos()">
+        </div>
+    </div>
+
+
+
+    <script>
+        function guardarRetos(){
+            var reto_1 = document.getElementById("reto_1").value;
+            // Resto de variables omitidas para mayor claridad
+
+            // Construir la URL con los valores como parámetros de consulta
+            var url = "ruleta.html";
+            url += "?reto_1=" + encodeURIComponent(reto_1);
+            // Resto de parámetros omitidos para mayor claridad
+
+            // Redirigir a la página de destino
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

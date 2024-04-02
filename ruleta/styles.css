@@ -1,0 +1,256 @@
+.ruleta-container {
+  text-align: center;
+}
+
+.ruleta {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.sector {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 200px;
+}
+
+#spin-btn {
+  margin-top: 20px;
+}
+  
+
+
+.cuadro{
+  background-color: rgba(211, 238, 60, 0.9);
+  border-radius: 20px;
+  width: 710px;
+  height: 570px;
+  position: absolute;
+  left: 320px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+.cuadro .botonCerrar{
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: rgba(255,0,0,0.7);
+  position: absolute;
+  bottom: 20px;
+  margin-left: -55px;
+  color: white;
+  font-size: 18px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.cuadro .botonCerrar:hover{
+  background-color: rgb(255,0,0);
+}
+.cuadro .botonCerrar:active{
+  background-color: rgba(255,0,0,0.6);
+  color:black ;
+}
+
+/* --------diseño----------------- */
+
+.circulo{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(211, 238, 60);
+  border-radius: 50%;
+  position: absolute;
+}
+.circulo1{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.circulo2{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores2 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+.circulo3{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 380px;
+  left: 220px;
+}
+.circulo4{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores2 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 540px;
+  left: 400px;
+}
+.circulo5{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.circulo6{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores2 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  right: 100px;
+}
+.circulo7{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 380px;
+  right: 220px;
+}
+.circulo8{
+  width: 50px;
+  height: 50px;
+  animation: cambioColores2 1s infinite;
+  border-radius: 50%;
+  position: absolute;
+  top: 540px;
+  right: 400px;
+}
+
+.ovalo1{
+  width: 50px;
+  height: 100px;
+  border-radius: 100px;
+  animation: movimiento4 1s infinite;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: yellow;
+}
+.ovalo2{
+  width: 50px;
+  height: 100px;
+  border-radius: 100px;
+  animation: movimiento4 1s infinite;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: yellow;
+}
+
+
+
+
+
+
+
+
+
+/* -----------------------retos--------------------- */
+.ruleta2 .reto1{
+  position: relative;
+  top: 280px;
+  left: 20px;
+  transform: rotate(47deg);
+}
+.ruleta2 .reto2{
+  position: relative;
+  top: 235px;
+  left: 30px;
+  transform: rotate(20deg);
+}
+.ruleta2 .reto3{
+  position: relative;
+  top: 175px;
+  left: 40px;
+  transform: rotate(-15deg);
+}
+.ruleta2 .reto4{
+  position: relative;
+  top: 135px;
+  left: 40px;
+  transform: rotate(-40deg);
+}
+.ruleta2 .reto5{
+  position: relative;
+  top: 80px;
+  left: -7px;
+  /* padding-left: 10px; */
+  transform: rotate(-82deg);
+}
+.ruleta2 .reto6{
+  position: relative;
+  top:55px;
+  left: -18px;
+  /* padding-left: 10px; */
+  transform: rotate(-110deg);
+}
+.ruleta2 .reto7{
+  position: relative;
+  top:40px;
+  left: -25px;
+  /* padding-left: 10px; */
+  transform: rotate(-140deg);
+}
+
+.ruleta2 .reto8{
+  position: relative;
+  top:5px;
+  left: -25px;
+  /* padding-left: 10px; */
+  transform: rotate(-165deg);
+}
+.ruleta2 .reto9{
+  position: relative;
+  top:0px;
+  left: -25px;
+  /* padding-left: 10px; */
+  transform: rotate(160deg);
+}
+.ruleta2 .reto10{
+  position: relative;
+  top:-30px;
+  left: -25px;
+  /* padding-left: 10px; */
+  transform: rotate(135deg);
+}
+.ruleta2 .reto11{
+  position: relative;
+  top:-50px;
+  left: -5px;
+  /* padding-left: 10px; */
+  transform: rotate(103deg);
+}
+
+.ruleta2 .reto12{
+  position: relative;
+  top:-100px;
+  left: 5px;
+  padding-left: 10px;
+  transform: rotate(76deg);
+}

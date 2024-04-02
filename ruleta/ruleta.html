@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruleta</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{
+        /* background-color: black; */
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 90vh;
+        
+    }
+    .ruleta2{
+        background-image: url(ruleta.png);
+        background-repeat: no-repeat;
+        background-size: 550px;
+        /* background-color: red; */
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
+        /* margin-top: 20px; */
+    }
+
+    .cuadro{
+            animation: movimiento2 .5s ease-in-out;
+        }
+
+    @keyframes movimiento2{
+        0%{
+            top: -200px;
+        }
+        100%{
+            top: 30px;
+            
+        }
+    }
+    .imagen{
+        animation: movimiento3 1.5s ease-in-out infinite;
+    }
+    @keyframes movimiento3{
+        0%{
+            transform: rotate(0deg);
+        }
+        50%{
+            transform: rotate(25deg);
+        }
+        100%{
+            transform: rotate(0deg);
+            
+        }
+        
+    }
+    @keyframes cambioColores{
+        0%{
+            background-color: rgb(216, 250, 26);
+            box-shadow: 0px 0px 0px 6px rgb(216, 250, 26);
+        }
+        
+        100%{
+            background-color: rgb(130, 145, 45);
+        }
+        
+    }
+    @keyframes cambioColores2{
+        0%{
+            background-color: rgb(130, 145, 45);
+            
+        }
+        
+        100%{
+            background-color: rgb(216, 250, 26);
+            box-shadow: 0px 0px 0px 6px rgb(216, 250, 26);
+        }
+        
+    }
+    
+    @keyframes movimiento4{
+        0%{
+            bottom: 20px;
+            
+        }
+        50%{
+            bottom: 70%;
+        }
+        100%{
+            bottom: 20px;
+        }
+        
+    }
+    
+  </style>
+</head>
+<body>
+    
+    <div class="circulo"></div>
+    <div class="circulo1"></div>
+    <div class="circulo2"></div>
+    <div class="circulo3"></div>
+    <div class="circulo4"></div>
+    <div class="circulo5"></div>
+    <div class="circulo6"></div>
+    <div class="circulo7"></div>
+    <div class="circulo8"></div>
+
+    <div class="ovalo1"></div>
+    <div class="ovalo2"></div>
+
+    <div class="ruleta2" id="ruleta" onclick="girar()">
+        <div class="reto1">
+            <p id="reto1">COMER 1 HUEVOS</p>
+        </div>
+        <div class="reto2">
+            <p id="reto2">COMER 2 HUEVOS</p>
+        </div>
+        <div class="reto3">
+            <p id="reto3">COMER 3 HUEVOS</p>
+        </div>
+         <div class="reto4">
+            <p id="reto4">COMER 4 HUEVOS</p>
+        </div>
+        <div class="reto5">
+            <p id="reto5">COMER 5 HUEVOS</p>
+        </div>
+        <div class="reto6">
+            <p id="reto6">COMER 6 HUEVOS</p>
+        </div>
+       <div class="reto7">
+            <p id="reto7">COMER 7 HUEVOS</p>
+        </div>
+        <div class="reto8">
+            <p id="reto8">COMER 8 HUEVOS</p>
+        </div>
+         <div class="reto9">
+            <p id="reto9">COMER 9 HUEVOS</p>
+        </div>
+        <div class="reto10">
+            <p id="reto10">COMER 10 HUEVOS</p>
+        </div>
+       <div class="reto11">
+            <p id="reto11">COMER 11 HUEVOS</p>
+        </div>
+        <div class="reto12">
+            <p id="reto12">COMER 12 HUEVOS</p>
+        </div>
+
+        
+    </div>
+<!-- 
+    <div class="retos">
+        <input type="text" id="reto_1"><br>
+        <input type="text" id="reto_2"><br>
+        <input type="text" id="reto_3"><br>
+        <input type="text" id="reto_4"><br>
+        <input type="text" id="reto_5"><br>
+        <input type="text" id="reto_6"><br>
+        <input type="text" id="reto_7"><br>
+        <input type="text" id="reto_8"><br>
+        <input type="text" id="reto_9"><br>
+        <input type="text" id="reto_10"><br>
+        <input type="text" id="reto_11"><br>
+        <input type="text" id="reto_12"><br>
+        <input type="submit" value="registrar" onclick="guardarRetos()">
+    </div> -->
+    
+    
+  
+  <script src="app.js">
+        // Función para obtener los parámetros de la URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Leer los parámetros de la URL y actualizar los elementos correspondientes
+        document.addEventListener("DOMContentLoaded", function() {
+            var reto_1 = getParameterByName('reto_1');
+            // Resto de variables omitidas para mayor claridad
+
+            cambiarRetos(reto_1, /* resto de parámetros */);
+        });
+
+        function cambiarRetos(reto_1, /* resto de parámetros */) {
+            var reto1 = document.getElementById("reto1");
+            // Resto de variables omitidas para mayor claridad
+
+            reto1.textContent = reto_1;
+            // Resto de asignaciones de valores a los elementos omitidos para mayor claridad
+        }
+  </script>
+</body>
+</html>
